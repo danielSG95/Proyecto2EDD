@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="447.0" prefWidth="404.0" styleClass="root" stylesheets="@../css/Styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.FxmlClientController">
+   <children>
+      <JFXTextField fx:id="txtUsername" focusColor="#59c366" labelFloat="true" layoutX="94.0" layoutY="154.0" prefHeight="26.0" prefWidth="230.0" promptText="Usuario" styleClass="jfx-text-field" />
+      <JFXPasswordField fx:id="txtPassword" focusColor="#59c366" labelFloat="true" layoutX="94.0" layoutY="246.0" onKeyPressed="#LoginKeyPressed" prefHeight="26.0" prefWidth="230.0" promptText="Contraseña" styleClass="jfx-text-field" />
+      <JFXButton fx:id="btnAceptarLogin" layoutX="235.0" layoutY="362.0" onAction="#Login" prefHeight="36.0" prefWidth="103.0" styleClass="login-button" text="Aceptar" />
+      <FontAwesomeIconView glyphName="USER" layoutX="70.0" layoutY="181.0" size="25" />
+      <FontAwesomeIconView glyphName="KEY" layoutX="66.0" layoutY="273.0" size="25" />
+      <JFXButton fx:id="btnCancelar" layoutX="70.0" layoutY="362.0" onAction="#cleanAction" prefHeight="36.0" prefWidth="103.0" styleClass="cancel-button" text="Cancelar" />
+      <Hyperlink fx:id="hyperlinkRegister" focusTraversable="false" layoutX="151.0" layoutY="309.0" onAction="#registerAction" styleClass="fx-hyperlink" text="Registrarse" textAlignment="CENTER" textFill="#fff6f6" />
+      <FontAwesomeIconView glyphName="LOCK" layoutX="181.0" layoutY="79.0" size="65" AnchorPane.leftAnchor="181.0" AnchorPane.rightAnchor="181.21428680419922" AnchorPane.topAnchor="23.28571319580078" />
+   </children>
+</AnchorPane>

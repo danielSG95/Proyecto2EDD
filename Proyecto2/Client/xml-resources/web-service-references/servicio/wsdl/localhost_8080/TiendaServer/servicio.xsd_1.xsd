@@ -1,0 +1,573 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://servicio.server.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://servicio.server.com/">
+
+<xs:element name="Login" type="tns:Login"/>
+
+<xs:element name="LoginResponse" type="tns:LoginResponse"/>
+
+<xs:element name="buscarProducto" type="tns:buscarProducto"/>
+
+<xs:element name="buscarProductoResponse" type="tns:buscarProductoResponse"/>
+
+<xs:element name="buscarUsuario" type="tns:buscarUsuario"/>
+
+<xs:element name="buscarUsuarioResponse" type="tns:buscarUsuarioResponse"/>
+
+<xs:element name="cargarArchivoCarro" type="tns:cargarArchivoCarro"/>
+
+<xs:element name="cargarArchivoCarroResponse" type="tns:cargarArchivoCarroResponse"/>
+
+<xs:element name="cargarArchivoCompra" type="tns:cargarArchivoCompra"/>
+
+<xs:element name="cargarArchivoCompraResponse" type="tns:cargarArchivoCompraResponse"/>
+
+<xs:element name="cargarArchivoDetalle" type="tns:cargarArchivoDetalle"/>
+
+<xs:element name="cargarArchivoDetalleResponse" type="tns:cargarArchivoDetalleResponse"/>
+
+<xs:element name="cargarArchivoDireccion" type="tns:cargarArchivoDireccion"/>
+
+<xs:element name="cargarArchivoDireccionResponse" type="tns:cargarArchivoDireccionResponse"/>
+
+<xs:element name="cargarArchivoProducto" type="tns:cargarArchivoProducto"/>
+
+<xs:element name="cargarArchivoProductoResponse" type="tns:cargarArchivoProductoResponse"/>
+
+<xs:element name="cargarArchivoUsuario" type="tns:cargarArchivoUsuario"/>
+
+<xs:element name="cargarArchivoUsuarioResponse" type="tns:cargarArchivoUsuarioResponse"/>
+
+<xs:element name="cargarArchivoVenta" type="tns:cargarArchivoVenta"/>
+
+<xs:element name="cargarArchivoVentaResponse" type="tns:cargarArchivoVentaResponse"/>
+
+<xs:element name="crearUsuario" type="tns:crearUsuario"/>
+
+<xs:element name="crearUsuarioResponse" type="tns:crearUsuarioResponse"/>
+
+<xs:element name="eliminarProducto" type="tns:eliminarProducto"/>
+
+<xs:element name="eliminarProductoResponse" type="tns:eliminarProductoResponse"/>
+
+<xs:element name="eliminarUsuario" type="tns:eliminarUsuario"/>
+
+<xs:element name="eliminarUsuarioResponse" type="tns:eliminarUsuarioResponse"/>
+
+<xs:element name="generarFactura" type="tns:generarFactura"/>
+
+<xs:element name="generarFacturaResponse" type="tns:generarFacturaResponse"/>
+
+<xs:element name="generarReporteBusquedaCantidad" type="tns:generarReporteBusquedaCantidad"/>
+
+<xs:element name="generarReporteBusquedaCantidadResponse" type="tns:generarReporteBusquedaCantidadResponse"/>
+
+<xs:element name="generarReporteBusquedaFecha" type="tns:generarReporteBusquedaFecha"/>
+
+<xs:element name="generarReporteBusquedaFechaResponse" type="tns:generarReporteBusquedaFechaResponse"/>
+
+<xs:element name="generarReporteBusquedaNickname" type="tns:generarReporteBusquedaNickname"/>
+
+<xs:element name="generarReporteBusquedaNicknameResponse" type="tns:generarReporteBusquedaNicknameResponse"/>
+
+<xs:element name="generarReporteCarrito" type="tns:generarReporteCarrito"/>
+
+<xs:element name="generarReporteCarritoResponse" type="tns:generarReporteCarritoResponse"/>
+
+<xs:element name="generarReporteCompras" type="tns:generarReporteCompras"/>
+
+<xs:element name="generarReporteComprasResponse" type="tns:generarReporteComprasResponse"/>
+
+<xs:element name="generarReporteGeneral" type="tns:generarReporteGeneral"/>
+
+<xs:element name="generarReporteGeneralResponse" type="tns:generarReporteGeneralResponse"/>
+
+<xs:element name="generarReporteProductos" type="tns:generarReporteProductos"/>
+
+<xs:element name="generarReporteProductosResponse" type="tns:generarReporteProductosResponse"/>
+
+<xs:element name="generarReporteRangoFecha" type="tns:generarReporteRangoFecha"/>
+
+<xs:element name="generarReporteRangoFechaResponse" type="tns:generarReporteRangoFechaResponse"/>
+
+<xs:element name="generarReporteUsuarios" type="tns:generarReporteUsuarios"/>
+
+<xs:element name="generarReporteUsuariosResponse" type="tns:generarReporteUsuariosResponse"/>
+
+<xs:element name="generarReporteVentas" type="tns:generarReporteVentas"/>
+
+<xs:element name="generarReporteVentasResponse" type="tns:generarReporteVentasResponse"/>
+
+<xs:element name="ingresarCarrito" type="tns:ingresarCarrito"/>
+
+<xs:element name="ingresarCarritoResponse" type="tns:ingresarCarritoResponse"/>
+
+<xs:element name="ingresarDireccion" type="tns:ingresarDireccion"/>
+
+<xs:element name="ingresarDireccionResponse" type="tns:ingresarDireccionResponse"/>
+
+<xs:element name="ingresarProductoCompra" type="tns:ingresarProductoCompra"/>
+
+<xs:element name="ingresarProductoCompraResponse" type="tns:ingresarProductoCompraResponse"/>
+
+<xs:element name="insertarProducto" type="tns:insertarProducto"/>
+
+<xs:element name="insertarProductoResponse" type="tns:insertarProductoResponse"/>
+
+<xs:element name="listaFacturas" type="tns:listaFacturas"/>
+
+<xs:element name="listaFacturasResponse" type="tns:listaFacturasResponse"/>
+
+<xs:element name="modificarProducto" type="tns:modificarProducto"/>
+
+<xs:element name="modificarProductoResponse" type="tns:modificarProductoResponse"/>
+
+<xs:element name="modificarUsuario" type="tns:modificarUsuario"/>
+
+<xs:element name="modificarUsuarioResponse" type="tns:modificarUsuarioResponse"/>
+
+<xs:element name="obtenerCarrito" type="tns:obtenerCarrito"/>
+
+<xs:element name="obtenerCarritoResponse" type="tns:obtenerCarritoResponse"/>
+
+<xs:element name="obtenerDirecciones" type="tns:obtenerDirecciones"/>
+
+<xs:element name="obtenerDireccionesResponse" type="tns:obtenerDireccionesResponse"/>
+
+<xs:element name="obtenerProductos" type="tns:obtenerProductos"/>
+
+<xs:element name="obtenerProductosResponse" type="tns:obtenerProductosResponse"/>
+
+<xs:complexType name="buscarUsuario">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:usuario" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="usuario">
+<xs:sequence>
+<xs:element name="nickname" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cargarArchivoCarro">
+<xs:sequence>
+<xs:element name="data" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cargarArchivoCarroResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarProducto">
+<xs:sequence>
+<xs:element name="id" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarProductoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:producto" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="producto">
+<xs:sequence>
+<xs:element name="codigoProducto" type="xs:string" minOccurs="0"/>
+<xs:element name="marca" type="xs:string" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="pathImagen" type="xs:string" minOccurs="0"/>
+<xs:element name="precio" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerProductos">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerProductosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generarReporteBusquedaNickname">
+<xs:sequence>
+<xs:element name="fecha" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generarReporteBusquedaNicknameResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ingresarDireccion">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="direccion" type="xs:string" minOccurs="0"/>
+<xs:element name="envio" type="xs:int"/>
+<xs:element name="factura" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ingresarDireccionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerCarrito">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerCarritoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generarReporteCarrito">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generarReporteCarritoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertarProducto">
+<xs:sequence>
+<xs:element name="id" type="xs:string" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="marca" type="xs:string" minOccurs="0"/>
+<xs:element name="precio" type="xs:string" minOccurs="0"/>
+<xs:element name="imgpath" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertarProductoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generarReporteCompras">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generarReporteComprasResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generarReporteUsuarios">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="generarReporteUsuariosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generarReporteProductos">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="generarReporteProductosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generarReporteVentas">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="generarReporteVentasResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ingresarCarrito">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="cantidad" type="xs:int"/>
+<xs:element name="idP" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ingresarCarritoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cargarArchivoVenta">
+<xs:sequence>
+<xs:element name="data" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cargarArchivoVentaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generarReporteBusquedaCantidad">
+<xs:sequence>
+<xs:element name="fecha" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generarReporteBusquedaCantidadResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cargarArchivoCompra">
+<xs:sequence>
+<xs:element name="data" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cargarArchivoCompraResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generarFactura">
+<xs:sequence>
+<xs:element name="nickname" type="xs:string" minOccurs="0"/>
+<xs:element name="codigo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generarFacturaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="crearUsuario">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="dir" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="crearUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generarReporteGeneral">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="generarReporteGeneralResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cargarArchivoProducto">
+<xs:sequence>
+<xs:element name="data" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cargarArchivoProductoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminarUsuario">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminarUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generarReporteRangoFecha">
+<xs:sequence>
+<xs:element name="fechas" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generarReporteRangoFechaResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="Login">
+<xs:sequence>
+<xs:element name="user" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="LoginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cargarArchivoUsuario">
+<xs:sequence>
+<xs:element name="data" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cargarArchivoUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerDirecciones">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obtenerDireccionesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cargarArchivoDireccion">
+<xs:sequence>
+<xs:element name="data" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cargarArchivoDireccionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listaFacturas">
+<xs:sequence>
+<xs:element name="nickname" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listaFacturasResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminarProducto">
+<xs:sequence>
+<xs:element name="id" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminarProductoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarProducto">
+<xs:sequence>
+<xs:element name="id" type="xs:string" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="marca" type="xs:string" minOccurs="0"/>
+<xs:element name="precio" type="xs:string" minOccurs="0"/>
+<xs:element name="imgpath" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarProductoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ingresarProductoCompra">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="cantidad" type="xs:int"/>
+<xs:element name="idP" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ingresarProductoCompraResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cargarArchivoDetalle">
+<xs:sequence>
+<xs:element name="data" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cargarArchivoDetalleResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generarReporteBusquedaFecha">
+<xs:sequence>
+<xs:element name="fecha" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="generarReporteBusquedaFechaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarUsuario">
+<xs:sequence>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

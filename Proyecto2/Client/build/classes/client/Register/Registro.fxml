@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="459.0" prefWidth="405.0" styleClass="root" stylesheets="@../../css/Styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Register.RegistroController">
+   <children>
+      <FontAwesomeIconView glyphName="USER_PLUS" layoutX="153.0" layoutY="83.0" size="65" />
+      <JFXTextField fx:id="txtUsername" labelFloat="true" layoutX="109.0" layoutY="132.0" promptText="Nombre de Usuario" />
+      <JFXPasswordField fx:id="txtPassword" labelFloat="true" layoutX="109.0" layoutY="211.0" promptText="Contraseña" />
+      <FontAwesomeIconView glyphName="USER" layoutX="74.0" layoutY="165.0" size="25" wrappingWidth="25.0" />
+      <FontAwesomeIconView glyphName="KEY" layoutX="74.0" layoutY="244.0" size="25" wrappingWidth="25.0" />
+      <FontAwesomeIconView glyphName="ADDRESS_CARD" layoutX="74.0" layoutY="338.0" size="25" />
+      <JFXTextField fx:id="txtDir" labelFloat="true" layoutX="109.0" layoutY="305.0" promptText="Direccion" />
+      <JFXButton fx:id="btnCancel" buttonType="RAISED" layoutX="87.0" layoutY="397.0" onAction="#cancelAction" prefHeight="36.0" prefWidth="103.0" styleClass="cancel-button" text="Cancelar" />
+      <JFXButton fx:id="btnAccept" buttonType="RAISED" layoutX="228.0" layoutY="397.0" onAction="#acceptAction" prefHeight="36.0" prefWidth="103.0" styleClass="login-button" text="Aceptar" />
+   </children>
+</AnchorPane>

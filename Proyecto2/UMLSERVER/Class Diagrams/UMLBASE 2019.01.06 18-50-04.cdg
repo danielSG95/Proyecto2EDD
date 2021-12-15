@@ -1,0 +1,1166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="UMLBASE">
+  <ClassDiagramComponents>
+    <Class name="servicio" package="com.server.servicio" visibility="public" xPosition="-5.0" yPosition="412.0">
+      <Fields>
+        <Field name="IMP" type="ImplementacionDao" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="Login" returnType="int" visibility="public">
+          <Argument type="String" name="user"/>
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="crearUsuario" returnType="boolean" visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+          <Argument type="String" name="dir"/>
+        </Method>
+        <Method name="buscarUsuario" returnType="Usuario" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="modificarUsuario" returnType="boolean" visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="eliminarUsuario" returnType="boolean" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="ingresarDireccion" returnType="boolean" visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="direccion"/>
+          <Argument type="int" name="envio"/>
+          <Argument type="int" name="factura"/>
+        </Method>
+        <Method name="ingresarProductoCompra" returnType="boolean" visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="int" name="cantidad"/>
+          <Argument type="String" name="idP"/>
+        </Method>
+        <Method name="ingresarCarrito" returnType="boolean" visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="int" name="cantidad"/>
+          <Argument type="String" name="idP"/>
+        </Method>
+        <Method name="insertarProducto" returnType="boolean" visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="marca"/>
+          <Argument type="String" name="precio"/>
+          <Argument type="String" name="img"/>
+        </Method>
+        <Method name="buscarProducto" returnType="Producto" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="modificarProducto" returnType="boolean" visibility="public">
+          <Argument type="String" name="id"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="marca"/>
+          <Argument type="String" name="precio"/>
+          <Argument type="String" name="img"/>
+        </Method>
+        <Method name="generarReporteBusquedaFecha" returnType="String" visibility="public">
+          <Argument type="String" name="fecha"/>
+        </Method>
+        <Method name="generarReporteBusquedaNickname" returnType="String" visibility="public">
+          <Argument type="String" name="nickname"/>
+        </Method>
+        <Method name="generarReporteBusquedaCantidad" returnType="String" visibility="public">
+          <Argument type="double" name="cantidad"/>
+        </Method>
+        <Method name="generarFactura" returnType="boolean" visibility="public">
+          <Argument type="String" name="nickname"/>
+          <Argument type="String" name="codigo"/>
+        </Method>
+        <Method name="eliminarProducto" returnType="boolean" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="cargarArchivoUsuario" returnType="String" visibility="public">
+          <Argument type="String" name="data"/>
+        </Method>
+        <Method name="cargarArchivoDireccion" returnType="String" visibility="public">
+          <Argument type="String" name="data"/>
+        </Method>
+        <Method name="cargarArchivoCompra" returnType="String" visibility="public">
+          <Argument type="String" name="data"/>
+        </Method>
+        <Method name="cargarArchivoCarro" returnType="String" visibility="public">
+          <Argument type="String" name="data"/>
+        </Method>
+        <Method name="cargarArchivoProducto" returnType="String" visibility="public">
+          <Argument type="String" name="data"/>
+        </Method>
+        <Method name="cargarArchivoVenta" returnType="String" visibility="public">
+          <Argument type="String" name="data"/>
+        </Method>
+        <Method name="cargarArchivoDetalle" returnType="String" visibility="public">
+          <Argument type="String" name="data"/>
+        </Method>
+        <Method name="generarReporteComras" returnType="String" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="generarReporteCarrito" returnType="String" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="generarReporteUsuarios" returnType="String" visibility="public"/>
+        <Method name="generarReporteProductos" returnType="String" visibility="public"/>
+        <Method name="generarReporteVentas" returnType="String" visibility="public"/>
+        <Method name="generarReporteGeneral" returnType="/*Falta completar el metodo*/ String" visibility="public"/>
+        <Method name="obtenerDirecciones" returnType="String" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="obtenerProductos" returnType="String" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="obtenerCarrito" returnType="String" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Detalle" package="com.server.modelo" visibility="public" xPosition="2025.0" yPosition="58.0">
+      <Fields>
+        <Field name="cantidad" type="int" visibility="private"/>
+        <Field name="precio" type="float" visibility="private"/>
+        <Field name="producto" type="Producto" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="cantidad"/>
+          <Argument type="float" name="precio"/>
+          <Argument type="Producto" name="producto"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCantidad" returnType="int" visibility="public"/>
+        <Method name="setCantidad" returnType="void" visibility="public">
+          <Argument type="int" name="cantidad"/>
+        </Method>
+        <Method name="getPrecio" returnType="float" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="float" name="precio"/>
+        </Method>
+        <Method name="getProducto" returnType="Producto" visibility="public"/>
+        <Method name="setProducto" returnType="void" visibility="public">
+          <Argument type="Producto" name="producto"/>
+        </Method>
+        <Method name="escribirObjetoConsole" returnType="String" visibility="public"/>
+        <Method name="modificarObjeto" returnType="void" visibility="public">
+          <Argument type="Object" name="q"/>
+        </Method>
+        <Method name="escribirObjeto" returnType="String" visibility="public"/>
+        <Method name="devolverClave" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Producto" package="com.server.modelo" visibility="public" xPosition="758.0" yPosition="70.0">
+      <Fields>
+        <Field name="codigoProducto" type="String" visibility="package"/>
+        <Field name="nombre" type="String" visibility="package"/>
+        <Field name="marca" type="String" visibility="package"/>
+        <Field name="precio" type="float" visibility="package"/>
+        <Field name="pathImagen" type="String" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="codigo"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="codigoProducto"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="marca"/>
+          <Argument type="float" name="precio"/>
+          <Argument type="String" name="pathImagen"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCodigoProducto" returnType="String" visibility="public"/>
+        <Method name="setCodigoProducto" returnType="void" visibility="public">
+          <Argument type="String" name="codigoProducto"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getMarca" returnType="String" visibility="public"/>
+        <Method name="setMarca" returnType="void" visibility="public">
+          <Argument type="String" name="marca"/>
+        </Method>
+        <Method name="getPrecio" returnType="float" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="float" name="precio"/>
+        </Method>
+        <Method name="getPathImagen" returnType="String" visibility="public"/>
+        <Method name="setPathImagen" returnType="void" visibility="public">
+          <Argument type="String" name="pathImagen"/>
+        </Method>
+        <Method name="escribirObjetoConsole" returnType="String" visibility="public"/>
+        <Method name="modificarObjeto" returnType="void" visibility="public">
+          <Argument type="Object" name="q"/>
+        </Method>
+        <Method name="escribirObjeto" returnType="String" visibility="public"/>
+        <Method name="devolverClave" returnType="String" visibility="public"/>
+        <Method name="esIgual" returnType="boolean" visibility="public">
+          <Argument type="Object" name="q"/>
+        </Method>
+        <Method name="esMayor" returnType="boolean" visibility="public">
+          <Argument type="Object" name="q"/>
+        </Method>
+        <Method name="esMenor" returnType="boolean" visibility="public">
+          <Argument type="Object" name="q"/>
+        </Method>
+        <Method name="mayorIgual" returnType="boolean" visibility="public">
+          <Argument type="Object" name="q"/>
+        </Method>
+        <Method name="menorIgual" returnType="boolean" visibility="public">
+          <Argument type="Object" name="q"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Usuario" package="com.server.modelo" visibility="public" xPosition="1162.0" yPosition="999.0">
+      <Fields>
+        <Field name="nickname" type="String" visibility="private"/>
+        <Field name="password" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nickname"/>
+          <Argument type="String" name="password"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="nickname"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="compareTo" returnType="int" visibility="private">
+          <Argument type="String" name="raiz"/>
+        </Method>
+        <Method name="claveToAscii" returnType="int" visibility="private">
+          <Argument type="String" name="clave"/>
+        </Method>
+        <Method name="getNickname" returnType="String" visibility="public"/>
+        <Method name="setNickname" returnType="void" visibility="public">
+          <Argument type="String" name="nickname"/>
+        </Method>
+        <Method name="getPassword" returnType="String" visibility="public"/>
+        <Method name="setPassword" returnType="void" visibility="public">
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="esIgual" returnType="boolean" visibility="public">
+          <Argument type="Object" name="q"/>
+        </Method>
+        <Method name="esMayor" returnType="boolean" visibility="public">
+          <Argument type="Object" name="q"/>
+        </Method>
+        <Method name="esMenor" returnType="boolean" visibility="public">
+          <Argument type="Object" name="q"/>
+        </Method>
+        <Method name="mayorIgual" returnType="boolean" visibility="public">
+          <Argument type="Object" name="q"/>
+        </Method>
+        <Method name="menorIgual" returnType="boolean" visibility="public">
+          <Argument type="Object" name="q"/>
+        </Method>
+        <Method name="escribirObjetoConsole" returnType="String" visibility="public"/>
+        <Method name="modificarObjeto" returnType="void" visibility="public">
+          <Argument type="Object" name="q"/>
+        </Method>
+        <Method name="escribirObjeto" returnType="String" visibility="public"/>
+        <Method name="devolverClave" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Direccion" package="com.server.modelo" visibility="public" xPosition="1998.0" yPosition="1215.0">
+      <Fields>
+        <Field name="direccion" type="String" visibility="private"/>
+        <Field name="envio" type="int" visibility="private"/>
+        <Field name="facturacion" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="direccion"/>
+          <Argument type="int" name="envio"/>
+          <Argument type="int" name="facturacion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDireccion" returnType="String" visibility="public"/>
+        <Method name="setDireccion" returnType="void" visibility="public">
+          <Argument type="String" name="direccion"/>
+        </Method>
+        <Method name="getEnvio" returnType="int" visibility="public"/>
+        <Method name="setEnvio" returnType="void" visibility="public">
+          <Argument type="int" name="envio"/>
+        </Method>
+        <Method name="getFacturacion" returnType="int" visibility="public"/>
+        <Method name="setFacturacion" returnType="void" visibility="public">
+          <Argument type="int" name="facturacion"/>
+        </Method>
+        <Method name="escribirObjetoConsole" returnType="String" visibility="public"/>
+        <Method name="modificarObjeto" returnType="void" visibility="public">
+          <Argument type="Object" name="q"/>
+        </Method>
+        <Method name="escribirObjeto" returnType="String" visibility="public"/>
+        <Method name="devolverClave" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Venta" package="com.server.modelo" visibility="public" xPosition="2919.0" yPosition="428.0">
+      <Fields>
+        <Field name="numeroFactura" type="String" visibility="private"/>
+        <Field name="fecha" type="LocalDate" visibility="private"/>
+        <Field name="total" type="double" visibility="private"/>
+        <Field name="usuario" type="Usuario" visibility="package"/>
+        <Field name="detalle" type="ListaSimple&lt;Detalle&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="numeroFactura"/>
+          <Argument type="LocalDate" name="fecha"/>
+          <Argument type="double" name="total"/>
+          <Argument type="Usuario" name="usuario"/>
+          <Argument type="ListaSimple&lt;Detalle&gt;" name="detalle"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="numeroFactura"/>
+          <Argument type="LocalDate" name="fecha"/>
+          <Argument type="double" name="total"/>
+          <Argument type="Usuario" name="usuario"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="n"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNumeroFactura" returnType="String" visibility="public"/>
+        <Method name="setNumeroFactura" returnType="void" visibility="public">
+          <Argument type="String" name="numeroFactura"/>
+        </Method>
+        <Method name="getFecha" returnType="LocalDate" visibility="public"/>
+        <Method name="setFecha" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="fecha"/>
+        </Method>
+        <Method name="getTotal" returnType="double" visibility="public"/>
+        <Method name="setTotal" returnType="void" visibility="public">
+          <Argument type="double" name="total"/>
+        </Method>
+        <Method name="getUsuario" returnType="Usuario" visibility="public"/>
+        <Method name="setUsuario" returnType="void" visibility="public">
+          <Argument type="Usuario" name="usuario"/>
+        </Method>
+        <Method name="getDetalle" returnType="ListaSimple&lt;Detalle&gt;" visibility="public"/>
+        <Method name="setDetalle" returnType="void" visibility="public">
+          <Argument type="ListaSimple&lt;Detalle&gt;" name="detalle"/>
+        </Method>
+        <Method name="escribirObjetoConsole" returnType="String" visibility="public"/>
+        <Method name="modificarObjeto" returnType="void" visibility="public">
+          <Argument type="Object" name="q"/>
+        </Method>
+        <Method name="escribirObjeto" returnType="String" visibility="public"/>
+        <Method name="devolverClave" returnType="String" visibility="public"/>
+        <Method name="esIgual" returnType="boolean" visibility="public">
+          <Argument type="Object" name="q"/>
+        </Method>
+        <Method name="esMayor" returnType="boolean" visibility="public">
+          <Argument type="Object" name="q"/>
+        </Method>
+        <Method name="esMenor" returnType="boolean" visibility="public">
+          <Argument type="Object" name="q"/>
+        </Method>
+        <Method name="mayorIgual" returnType="boolean" visibility="public">
+          <Argument type="Object" name="q"/>
+        </Method>
+        <Method name="menorIgual" returnType="boolean" visibility="public">
+          <Argument type="Object" name="q"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="B" package="com.server.dao" visibility="public" xPosition="3310.0" yPosition="1255.0">
+      <Fields>
+        <Field name="RUTADOT" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="RUTAIMG" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="orden" type="int" visibility="protected"/>
+        <Field name="raiz" type="Pagina" visibility="protected"/>
+        <Field name="reportes" type="ListaSimple" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getOrden" returnType="int" visibility="public"/>
+        <Method name="setOrden" returnType="void" visibility="public">
+          <Argument type="int" name="orden"/>
+        </Method>
+        <Method name="getRaiz" returnType="Pagina" visibility="public"/>
+        <Method name="setRaiz" returnType="void" visibility="public">
+          <Argument type="Pagina" name="raiz"/>
+        </Method>
+        <Method name="buscarNodo" returnType="boolean" visibility="private">
+          <Argument type="Pagina" name="actual"/>
+          <Argument type="T" name="valor"/>
+          <Argument type="Logical" name="l"/>
+        </Method>
+        <Method name="buscarElemento" returnType="T" visibility="public">
+          <Argument type="T" name="buscado"/>
+        </Method>
+        <Method name="buscar" returnType="Pagina" visibility="protected">
+          <Argument type="T" name="valor"/>
+          <Argument type="Logical" name="l"/>
+        </Method>
+        <Method name="buscar" returnType="Pagina" visibility="private">
+          <Argument type="Pagina" name="actual"/>
+          <Argument type="T" name="valor"/>
+          <Argument type="Logical" name="l"/>
+        </Method>
+        <Method name="insertar" returnType="void" visibility="public">
+          <Argument type="T" name="valor"/>
+        </Method>
+        <Method name="insertar" returnType="Pagina" visibility="package">
+          <Argument type="Pagina" name="raiz"/>
+          <Argument type="T" name="valor"/>
+        </Method>
+        <Method name="empujar" returnType="boolean" visibility="private">
+          <Argument type="Pagina" name="actual"/>
+          <Argument type="T" name="cl"/>
+          <Argument type="Logical" name="mediana"/>
+          <Argument type="Logical" name="nuevo"/>
+        </Method>
+        <Method name="meterPagina" returnType="void" visibility="private">
+          <Argument type="Pagina" name="actual"/>
+          <Argument type="Logical" name="cl"/>
+          <Argument type="Logical" name="ramaDr"/>
+          <Argument type="Logical" name="k"/>
+        </Method>
+        <Method name="dividirNodo" returnType="void" visibility="private">
+          <Argument type="Pagina" name="actual"/>
+          <Argument type="Logical" name="mediana"/>
+          <Argument type="Logical" name="nuevo"/>
+          <Argument type="Logical" name="pos"/>
+        </Method>
+        <Method name="recorridoInorden" returnType="void" visibility="public"/>
+        <Method name="recorridoInorden" returnType="void" visibility="private">
+          <Argument type="Pagina" name="raiz"/>
+        </Method>
+        <Method name="graficar" returnType="boolean" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="toDot" returnType="String" visibility="public"/>
+        <Method name="generarDotB" returnType="String" visibility="private"/>
+        <Method name="escribirPagina" returnType="String" visibility="private">
+          <Argument type="Pagina" name="raiz"/>
+        </Method>
+        <Method name="ePaginas" returnType="String" visibility="private">
+          <Argument type="Pagina" name="raiz"/>
+        </Method>
+        <Method name="enlazarPaginas" returnType="String" visibility="private">
+          <Argument type="Pagina" name="raiz"/>
+        </Method>
+        <Method name="conectarAvl" returnType="String" visibility="public"/>
+        <Method name="conectarAvl" returnType="String" visibility="public">
+          <Argument type="Pagina" name="raiz"/>
+        </Method>
+        <Method name="conectarHash" returnType="String" visibility="public"/>
+        <Method name="conectarHash" returnType="String" visibility="protected">
+          <Argument type="Pagina" name="raiz"/>
+        </Method>
+        <Method name="reporteTop" returnType="ListaSimple" visibility="public">
+          <Argument type="LocalDate" name="fechaI"/>
+          <Argument type="LocalDate" name="fechaF"/>
+        </Method>
+        <Method name="ayudateReporteTop" returnType="void" visibility="private">
+          <Argument type="LocalDate" name="fechaI"/>
+          <Argument type="LocalDate" name="fechaF"/>
+          <Argument type="Pagina" name="raiz"/>
+        </Method>
+        <Method name="bucarPorRangoFecha" returnType="void" visibility="private">
+          <Argument type="Pagina" name="rama"/>
+          <Argument type="LocalDate" name="fechaI"/>
+          <Argument type="LocalDate" name="fechaF"/>
+        </Method>
+        <Method name="reporteBusquedaPorFecha" returnType="ListaSimple" visibility="public">
+          <Argument type="LocalDate" name="fecha"/>
+        </Method>
+        <Method name="ayudanteReporteBusquedaPorFecha" returnType="void" visibility="private">
+          <Argument type="Pagina" name="raiz"/>
+          <Argument type="LocalDate" name="fecha"/>
+        </Method>
+        <Method name="bucarPorFecha" returnType="void" visibility="private">
+          <Argument type="Pagina" name="rama"/>
+          <Argument type="LocalDate" name="fecha"/>
+        </Method>
+        <Method name="reporteBusquedaPorNickname" returnType="ListaSimple" visibility="public">
+          <Argument type="String" name="nickname"/>
+        </Method>
+        <Method name="ayudanteBusquedaPorNickname" returnType="void" visibility="private">
+          <Argument type="Pagina" name="raiz"/>
+          <Argument type="String" name="nickname"/>
+        </Method>
+        <Method name="buscarPorNickname" returnType="void" visibility="private">
+          <Argument type="Pagina" name="raiz"/>
+          <Argument type="String" name="nickname"/>
+        </Method>
+        <Method name="reporteBusquedaPorValor" returnType="ListaSimple" visibility="public">
+          <Argument type="double" name="valor"/>
+        </Method>
+        <Method name="ayudanteBusquedaPorValor" returnType="void" visibility="private">
+          <Argument type="Pagina" name="raiz"/>
+          <Argument type="Double" name="valor"/>
+        </Method>
+        <Method name="buscarPorValor" returnType="void" visibility="private">
+          <Argument type="Pagina" name="raiz"/>
+          <Argument type="Double" name="valor"/>
+        </Method>
+        <Method name="compararFechas" returnType="boolean" visibility="private">
+          <Argument type="LocalDate" name="fechaVenta"/>
+          <Argument type="LocalDate" name="fechaI"/>
+          <Argument type="LocalDate" name="fechaF"/>
+        </Method>
+        <Method name="compararFecha" returnType="boolean" visibility="private">
+          <Argument type="LocalDate" name="inner"/>
+          <Argument type="LocalDate" name="fecha"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Logical" package="com.server.dao" visibility="public" xPosition="3907.0" yPosition="222.0">
+      <Fields>
+        <Field name="v" type="boolean" visibility="package"/>
+        <Field name="index" type="int" visibility="package"/>
+        <Field name="nd" type="Pagina" visibility="package"/>
+        <Field name="mediana" type="T" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="boolean" name="v"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="int" name="i"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="Pagina" name="nd"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="T" name="mediana"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setLogicalMediana" returnType="void" visibility="public">
+          <Argument type="T" name="m"/>
+        </Method>
+        <Method name="getLogicalMediana" returnType="T" visibility="public"/>
+        <Method name="setLogialNd" returnType="void" visibility="public">
+          <Argument type="Pagina" name="nd"/>
+        </Method>
+        <Method name="getLogicalNd" returnType="Pagina" visibility="public"/>
+        <Method name="setLogicalBoolean" returnType="void" visibility="public">
+          <Argument type="boolean" name="v"/>
+        </Method>
+        <Method name="getLogicalBoolean" returnType="boolean" visibility="public"/>
+        <Method name="setLogicalIndex" returnType="void" visibility="public">
+          <Argument type="int" name="i"/>
+        </Method>
+        <Method name="getLogicalIndex" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ImplementacionDao" package="com.server.dao" visibility="public" xPosition="38.0" yPosition="1175.0">
+      <Fields>
+        <Field name="USERNAME" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="PASSWORD" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="RUTAIMG" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="RUTADOT" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="AVLUSUARIOS" type="arbolAvl&lt;Usuario&gt;" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="PRODUCTOS" type="TablaHash" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="ARBOLB" type="B" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="log" type="LogFile" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="insertarUsuarioAvl" returnType="boolean" visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+          <Argument type="String" name="direccion"/>
+        </Method>
+        <Method name="login" returnType="int" visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="buscarUsuario" returnType="Usuario" visibility="public">
+          <Argument type="String" name="nickname"/>
+        </Method>
+        <Method name="modificarUsuario" returnType="boolean" visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="eliminarUsuario" returnType="boolean" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="insertarProducto" returnType="boolean" visibility="public">
+          <Argument type="String" name="codigoProducto"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="marca"/>
+          <Argument type="String" name="precio"/>
+          <Argument type="String" name="pathImagen"/>
+        </Method>
+        <Method name="buscarProducto" returnType="Producto" visibility="public">
+          <Argument type="String" name="codigo"/>
+        </Method>
+        <Method name="modificarProducto" returnType="boolean" visibility="public">
+          <Argument type="String" name="codigoProducto"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="marca"/>
+          <Argument type="String" name="precio"/>
+          <Argument type="String" name="pathImagen"/>
+        </Method>
+        <Method name="eliminarProducto" returnType="boolean" visibility="public">
+          <Argument type="String" name="codigo"/>
+        </Method>
+        <Method name="ingresarDireccion" returnType="boolean" visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="direccion"/>
+          <Argument type="int" name="envio"/>
+          <Argument type="int" name="factura"/>
+        </Method>
+        <Method name="insertarCompra" returnType="boolean" visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="int" name="cantidad"/>
+          <Argument type="String" name="idProducto"/>
+        </Method>
+        <Method name="insertarCarro" returnType="boolean" visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="int" name="cantidad"/>
+          <Argument type="String" name="idProducto"/>
+        </Method>
+        <Method name="eliminarProductoCarrito" returnType="boolean" visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="idproducto"/>
+        </Method>
+        <Method name="eliminarProductoListaDeseos" returnType="boolean" visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="idproducto"/>
+        </Method>
+        <Method name="cargarArchivoUsuario" returnType="String" visibility="public">
+          <Argument type="String" name="data"/>
+        </Method>
+        <Method name="cargarArchivoDireccion" returnType="String" visibility="public">
+          <Argument type="String" name="data"/>
+        </Method>
+        <Method name="cargarArchivoCompra" returnType="String" visibility="public">
+          <Argument type="String" name="data"/>
+        </Method>
+        <Method name="cargarArchivoCarro" returnType="String" visibility="public">
+          <Argument type="String" name="data"/>
+        </Method>
+        <Method name="cargarArchivoProducto" returnType="String" visibility="public">
+          <Argument type="String" name="data"/>
+        </Method>
+        <Method name="cargarArchivoVentas" returnType="String" visibility="public">
+          <Argument type="String" name="data"/>
+        </Method>
+        <Method name="cargarArchivoDetalle" returnType="String" visibility="public">
+          <Argument type="String" name="data"/>
+        </Method>
+        <Method name="procesarCargaCarrito" returnType="boolean" visibility="private">
+          <Argument type="String" name="c"/>
+        </Method>
+        <Method name="procesarCargarCompras" returnType="boolean" visibility="private">
+          <Argument type="String" name="c"/>
+        </Method>
+        <Method name="procesarCargaDireccion" returnType="boolean" visibility="private">
+          <Argument type="String" name="a"/>
+        </Method>
+        <Method name="generarReporteCompras" returnType="String" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="generarReporteCarrito" returnType="String" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="generarReporteAvl" returnType="String" visibility="public"/>
+        <Method name="generarReporteProductos" returnType="String" visibility="public"/>
+        <Method name="generarReporteVentas" returnType="String" visibility="public"/>
+        <Method name="generarReporteGeneralSistema" returnType="String" visibility="public"/>
+        <Method name="graficar" returnType="boolean" visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="args"/>
+          <Argument type="boolean" name="flag"/>
+        </Method>
+        <Method name="toDotSistema" returnType="String" visibility="public"/>
+        <Method name="listadoProductos" returnType="String" visibility="public"/>
+        <Method name="devolverDirecciones" returnType="String" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="devolverColaProductos" returnType="String" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="devolverColaCarrito" returnType="String" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="reporteTopUsuarios" returnType="String" visibility="public">
+          <Argument type="LocalDate" name="fechaI"/>
+          <Argument type="LocalDate" name="fechaF"/>
+        </Method>
+        <Method name="reporteBusquedaPorFecha" returnType="String" visibility="public">
+          <Argument type="String" name="fecha"/>
+        </Method>
+        <Method name="reporteBusquedaPorNickname" returnType="String" visibility="public">
+          <Argument type="String" name="nickname"/>
+        </Method>
+        <Method name="reporteBusquedaCantidad" returnType="String" visibility="public">
+          <Argument type="double" name="cant"/>
+        </Method>
+        <Method name="generarFactura" returnType="String" visibility="private">
+          <Argument type="String" name="codigoFactura"/>
+          <Argument type="String" name="nickname"/>
+        </Method>
+        <Method name="factura" returnType="boolean" visibility="public">
+          <Argument type="String" name="codigo"/>
+          <Argument type="String" name="nickname"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Cola" package="com.server.dao" visibility="public" xPosition="1699.0" yPosition="2000.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="insertar" returnType="void" visibility="public">
+          <Argument type="T" name="dato"/>
+          <Argument type="int" name="cantidad"/>
+        </Method>
+        <Method name="elminar" returnType="T" visibility="public">
+          <Argument type="T" name="valor"/>
+        </Method>
+        <Method name="deQueque" returnType="T" visibility="protected"/>
+        <Method name="modificar" returnType="T" visibility="public">
+          <Argument type="T" name="valorNuevo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="LogFile" package="com.server.dao" visibility="public" xPosition="1136.0" yPosition="1494.0">
+      <Fields>
+        <Field name="NAMEFILE" type="String" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="escribirArchivo" returnType="void" visibility="public">
+          <Argument type="String" name="cabecera"/>
+          <Argument type="String" name="recurso"/>
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="comprobarExistenciaFichero" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="TablaHash" package="com.server.dao" visibility="public" xPosition="1162.0" yPosition="1799.0">
+      <Fields>
+        <Field name="RUTADOT" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="RUTAIMG" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="TAM" type="int" visibility="protected"/>
+        <Field name="numElementos" type="int" visibility="protected"/>
+        <Field name="factorCarga" type="double" visibility="protected"/>
+        <Field name="elementos" type="Object" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="funcionPlegamiento" returnType="int" visibility="private">
+          <Argument type="String" name="clave"/>
+          <Argument type="int" name="m"/>
+          <Argument type="boolean" name="tipoOperacion"/>
+        </Method>
+        <Method name="exploracionCuadratica" returnType="int" visibility="private">
+          <Argument type="int" name="dir"/>
+          <Argument type="String" name="clave"/>
+          <Argument type="boolean" name="esBuscar"/>
+        </Method>
+        <Method name="claveToAscii" returnType="char[]" visibility="private">
+          <Argument type="String" name="clave"/>
+        </Method>
+        <Method name="darAlta" returnType="void" visibility="protected">
+          <Argument type="Object" name="valor"/>
+        </Method>
+        <Method name="rehashing" returnType="void" visibility="private"/>
+        <Method name="darBaja" returnType="boolean" visibility="protected">
+          <Argument type="Object" name="valor"/>
+        </Method>
+        <Method name="buscarElemento" returnType="Object" visibility="protected">
+          <Argument type="Object" name="buscado"/>
+        </Method>
+        <Method name="insertar" returnType="boolean" visibility="public">
+          <Argument type="Object" name="valor"/>
+        </Method>
+        <Method name="buscar" returnType="Object" visibility="public">
+          <Argument type="Object" name="valor"/>
+        </Method>
+        <Method name="eliminar" returnType="boolean" visibility="public">
+          <Argument type="Object" name="valor"/>
+        </Method>
+        <Method name="modificarElemento" returnType="boolean" visibility="protected">
+          <Argument type="Object" name="nuevo"/>
+        </Method>
+        <Method name="modificar" returnType="boolean" visibility="public">
+          <Argument type="Object" name="nuevo"/>
+        </Method>
+        <Method name="toDot" returnType="String" visibility="public"/>
+        <Method name="generarGrafo" returnType="String" visibility="private"/>
+        <Method name="graficar" returnType="boolean" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Pagina" package="com.server.dao" visibility="public" xPosition="3776.0" yPosition="752.0">
+      <Fields>
+        <Field name="estudiantes" type="Object" visibility="protected"/>
+        <Field name="ramas" type="Pagina" visibility="protected"/>
+        <Field name="cuenta" type="int" visibility="protected"/>
+        <Field name="m" type="int" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="nodoLleno" returnType="boolean" visibility="public"/>
+        <Method name="nodoSemiVacio" returnType="boolean" visibility="public"/>
+        <Method name="getClave" returnType="Object" visibility="public">
+          <Argument type="int" name="posicion"/>
+        </Method>
+        <Method name="setClave" returnType="void" visibility="public">
+          <Argument type="int" name="posicion"/>
+          <Argument type="T" name="estudiante"/>
+        </Method>
+        <Method name="getRama" returnType="Pagina" visibility="public">
+          <Argument type="int" name="posicion"/>
+        </Method>
+        <Method name="setRama" returnType="void" visibility="public">
+          <Argument type="int" name="posicion"/>
+          <Argument type="Pagina" name="pagina"/>
+        </Method>
+        <Method name="getCuenta" returnType="int" visibility="public"/>
+        <Method name="setCuenta" returnType="void" visibility="public">
+          <Argument type="int" name="valor"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="NodoAvl" package="com.server.dao" visibility="public" xPosition="1449.0" yPosition="2378.0">
+      <Fields>
+        <Field name="fe" type="int" visibility="protected"/>
+        <Field name="dato" type="T" visibility="protected"/>
+        <Field name="izdo" type="NodoAvl" visibility="package"/>
+        <Field name="dcho" type="NodoAvl" visibility="package"/>
+        <Field name="direcciones" type="ListaSimple&lt;Object&gt;" visibility="package"/>
+        <Field name="lista_pedidos" type="Cola&lt;Object&gt;" visibility="package"/>
+        <Field name="carrito_compra" type="Cola&lt;Object&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="T" name="valor"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDirecciones" returnType="ListaSimple&lt;Object&gt;" visibility="public"/>
+        <Method name="setDirecciones" returnType="void" visibility="public">
+          <Argument type="ListaSimple&lt;Object&gt;" name="direcciones"/>
+        </Method>
+        <Method name="getLista_pedidos" returnType="Cola&lt;Object&gt;" visibility="public"/>
+        <Method name="setLista_pedidos" returnType="void" visibility="public">
+          <Argument type="Cola&lt;Object&gt;" name="lista_pedidos"/>
+        </Method>
+        <Method name="getCarrito_compra" returnType="Cola&lt;Object&gt;" visibility="public"/>
+        <Method name="setCarrito_compra" returnType="void" visibility="public">
+          <Argument type="Cola&lt;Object&gt;" name="carrito_compra"/>
+        </Method>
+        <Method name="getFe" returnType="int" visibility="public"/>
+        <Method name="setFe" returnType="void" visibility="public">
+          <Argument type="int" name="fe"/>
+        </Method>
+        <Method name="getDato" returnType="T" visibility="public"/>
+        <Method name="setDato" returnType="void" visibility="public">
+          <Argument type="T" name="dato"/>
+        </Method>
+        <Method name="getIzdo" returnType="NodoAvl" visibility="public"/>
+        <Method name="setIzdo" returnType="void" visibility="public">
+          <Argument type="NodoAvl" name="izdo"/>
+        </Method>
+        <Method name="getDcho" returnType="NodoAvl" visibility="public"/>
+        <Method name="setDcho" returnType="void" visibility="public">
+          <Argument type="NodoAvl" name="dcho"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ListaSimple" package="com.server.dao" visibility="public" xPosition="2309.0" yPosition="1721.0">
+      <Fields>
+        <Field name="RUTADOT" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="RUTAIMG" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="primero" type="NodoSimple&lt;T&gt;" visibility="protected"/>
+        <Field name="ultimo" type="NodoSimple&lt;T&gt;" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getPrimero" returnType="NodoSimple" visibility="public"/>
+        <Method name="getUltimo" returnType="NodoSimple" visibility="public"/>
+        <Method name="esVacio" returnType="boolean" visibility="protected"/>
+        <Method name="insertar" returnType="void" visibility="public">
+          <Argument type="T" name="dato"/>
+        </Method>
+        <Method name="insertar" returnType="void" visibility="public">
+          <Argument type="T" name="dato"/>
+          <Argument type="int" name="cantidad"/>
+        </Method>
+        <Method name="insertar" returnType="void" visibility="protected">
+          <Argument type="NodoSimple&lt;T&gt;" name="nuevo"/>
+        </Method>
+        <Method name="buscar" returnType="NodoSimple&lt;T&gt;" visibility="public">
+          <Argument type="T" name="valor"/>
+        </Method>
+        <Method name="buscar" returnType="NodoSimple&lt;T&gt;" visibility="protected">
+          <Argument type="NodoSimple&lt;T&gt;" name="primero"/>
+          <Argument type="Comparador" name="dato"/>
+        </Method>
+        <Method name="elminar" returnType="T" visibility="public">
+          <Argument type="T" name="valor"/>
+        </Method>
+        <Method name="eliminar" returnType="T" visibility="protected">
+          <Argument type="Comparador" name="dato"/>
+        </Method>
+        <Method name="ordenar" returnType="ListaSimple" visibility="public">
+          <Argument type="ListaSimple" name="list"/>
+        </Method>
+        <Method name="modificar" returnType="T" visibility="public">
+          <Argument type="T" name="valorNuevo"/>
+        </Method>
+        <Method name="modificar" returnType="T" visibility="protected">
+          <Argument type="NodoSimple&lt;T&gt;" name="primero"/>
+          <Argument type="AdminObject" name="dato"/>
+        </Method>
+        <Method name="graficar" returnType="boolean" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="toDot" returnType="String" visibility="protected"/>
+        <Method name="conectarProductoHash" returnType="String" visibility="protected"/>
+        <Method name="conectarProductoBHash" returnType="String" visibility="protected"/>
+        <Method name="recorrer" returnType="void" visibility="protected"/>
+      </Methods>
+    </Class>
+    <Class name="NodoSimple" package="com.server.dao" visibility="public" xPosition="2233.0" yPosition="2414.0">
+      <Fields>
+        <Field name="dato" type="T" visibility="protected"/>
+        <Field name="numerico" type="int" visibility="protected"/>
+        <Field name="siguiente" type="NodoSimple&lt;T&gt;" visibility="protected"/>
+        <Field name="anterior" type="NodoSimple&lt;T&gt;" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="T" name="dato"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="T" name="dato"/>
+          <Argument type="int" name="cantidad"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNumerico" returnType="int" visibility="public"/>
+        <Method name="setNumerico" returnType="void" visibility="public">
+          <Argument type="int" name="numerico"/>
+        </Method>
+        <Method name="getDato" returnType="T" visibility="public"/>
+        <Method name="setDato" returnType="void" visibility="public">
+          <Argument type="T" name="dato"/>
+        </Method>
+        <Method name="getSiguiente" returnType="NodoSimple&lt;T&gt;" visibility="public"/>
+        <Method name="setSiguiente" returnType="void" visibility="public">
+          <Argument type="NodoSimple&lt;T&gt;" name="siguiente"/>
+        </Method>
+        <Method name="getAnterior" returnType="NodoSimple&lt;T&gt;" visibility="public"/>
+        <Method name="setAnterior" returnType="void" visibility="public">
+          <Argument type="NodoSimple&lt;T&gt;" name="anterior"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="arbolAvl" package="com.server.dao" visibility="public" xPosition="618.0" yPosition="2252.0">
+      <Fields>
+        <Field name="RUTADOT" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="RUTAIMG" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="raiz" type="NodoAvl&lt;T&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getRuta" returnType="String" visibility="public"/>
+        <Method name="insertar" returnType="void" visibility="public">
+          <Argument type="T" name="valor"/>
+        </Method>
+        <Method name="insertar" returnType="NodoAvl" visibility="private">
+          <Argument type="NodoAvl" name="raiz"/>
+          <Argument type="Comparador" name="dato"/>
+          <Argument type="Flag" name="f"/>
+        </Method>
+        <Method name="rotacionIIE" returnType="NodoAvl" visibility="private">
+          <Argument type="NodoAvl" name="n"/>
+          <Argument type="NodoAvl" name="n1"/>
+        </Method>
+        <Method name="rotacionDDE" returnType="NodoAvl" visibility="private">
+          <Argument type="NodoAvl" name="n"/>
+          <Argument type="NodoAvl" name="n1"/>
+        </Method>
+        <Method name="rotacionIDE" returnType="NodoAvl" visibility="private">
+          <Argument type="NodoAvl" name="n"/>
+          <Argument type="NodoAvl" name="n1"/>
+        </Method>
+        <Method name="rotacionDIE" returnType="NodoAvl" visibility="private">
+          <Argument type="NodoAvl" name="n"/>
+          <Argument type="NodoAvl" name="n1"/>
+        </Method>
+        <Method name="buscarElemento" returnType="T" visibility="public">
+          <Argument type="T" name="buscado"/>
+        </Method>
+        <Method name="buscarNodo" returnType="NodoAvl" visibility="public">
+          <Argument type="T" name="buscado"/>
+        </Method>
+        <Method name="localizar" returnType="NodoAvl&lt;T&gt;" visibility="protected">
+          <Argument type="NodoAvl&lt;T&gt;" name="raizSub"/>
+          <Argument type="Comparador" name="buscado"/>
+        </Method>
+        <Method name="modificarElemento" returnType="boolean" visibility="protected">
+          <Argument type="T" name="nuevo"/>
+        </Method>
+        <Method name="graficar" returnType="boolean" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="generarDot" returnType="String" visibility="private"/>
+        <Method name="toDot" returnType="String" visibility="public"/>
+        <Method name="toDot" returnType="String" visibility="private">
+          <Argument type="NodoAvl" name="raiz"/>
+        </Method>
+        <Method name="escribirClusterCarrito" returnType="String" visibility="private">
+          <Argument type="NodoAvl" name="raiz"/>
+        </Method>
+        <Method name="escribirClusterProductos" returnType="String" visibility="private">
+          <Argument type="NodoAvl" name="raiz"/>
+        </Method>
+        <Method name="escribirClusterDirecciones" returnType="String" visibility="private">
+          <Argument type="NodoAvl" name="raiz"/>
+        </Method>
+        <Method name="conectarProductoHash" returnType="String" visibility="protected"/>
+        <Method name="recorrerConectandoHash" returnType="String" visibility="protected">
+          <Argument type="NodoAvl" name="raiz"/>
+        </Method>
+        <Method name="eliminar" returnType="void" visibility="public">
+          <Argument type="T" name="valor"/>
+        </Method>
+        <Method name="borrarAvl" returnType="NodoAvl" visibility="private">
+          <Argument type="NodoAvl" name="raiz"/>
+          <Argument type="Comparador" name="dato"/>
+          <Argument type="Flag" name="flag"/>
+        </Method>
+        <Method name="reemplazar" returnType="NodoAvl" visibility="private">
+          <Argument type="NodoAvl" name="n"/>
+          <Argument type="NodoAvl" name="act"/>
+          <Argument type="Flag" name="f"/>
+        </Method>
+        <Method name="equilibrar1" returnType="NodoAvl" visibility="private">
+          <Argument type="NodoAvl" name="n"/>
+          <Argument type="Flag" name="cambiarA"/>
+        </Method>
+        <Method name="equilibrar2" returnType="NodoAvl" visibility="private">
+          <Argument type="NodoAvl" name="n"/>
+          <Argument type="Flag" name="cambiarA"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Flag" package="com.server.dao" visibility="public" xPosition="132.0" yPosition="2267.0">
+      <Fields>
+        <Field name="sw" type="boolean" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="boolean" name="v"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setFlag" returnType="void" visibility="public">
+          <Argument type="boolean" name="e"/>
+        </Method>
+        <Method name="getFlag" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="AdminObject" package="com.server.Idao" visibility="public" xPosition="1464.0" yPosition="630.0">
+      <Methods>
+        <Method name="escribirObjetoConsole" returnType="String" visibility="package"/>
+        <Method name="modificarObjeto" returnType="void" visibility="package">
+          <Argument type="Object" name="q"/>
+        </Method>
+        <Method name="escribirObjeto" returnType="String" visibility="package"/>
+        <Method name="devolverClave" returnType="String" visibility="package"/>
+      </Methods>
+    </Interface>
+    <Interface name="Comparador" package="com.server.Idao" visibility="public" xPosition="2772.0" yPosition="70.0">
+      <Methods>
+        <Method name="esIgual" returnType="boolean" visibility="package">
+          <Argument type="Object" name="q"/>
+        </Method>
+        <Method name="esMayor" returnType="boolean" visibility="package">
+          <Argument type="Object" name="q"/>
+        </Method>
+        <Method name="esMenor" returnType="boolean" visibility="package">
+          <Argument type="Object" name="q"/>
+        </Method>
+        <Method name="mayorIgual" returnType="boolean" visibility="package">
+          <Argument type="Object" name="q"/>
+        </Method>
+        <Method name="menorIgual" returnType="boolean" visibility="package">
+          <Argument type="Object" name="q"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.server.modelo.Producto" target="com.server.Idao.Comparador"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.server.modelo.Detalle" target="com.server.Idao.AdminObject"/>
+    <HasRelation name="reportes" source="com.server.dao.B" target="com.server.dao.ListaSimple" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ListaSimple"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.server.modelo.Usuario" target="com.server.Idao.Comparador"/>
+    <HasRelation name="usuario" source="com.server.modelo.Venta" target="com.server.modelo.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.server.servicio.servicio" target="com.server.modelo.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.server.modelo.Detalle" target="com.server.modelo.Producto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="IMP" source="com.server.servicio.servicio" target="com.server.dao.ImplementacionDao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="AVLUSUARIOS" source="com.server.dao.ImplementacionDao" target="com.server.modelo.Usuario" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.server.dao.arbolAvl" target="com.server.dao.NodoAvl" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.server.dao.ListaSimple" target="com.server.dao.ListaSimple" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="producto" source="com.server.modelo.Detalle" target="com.server.modelo.Producto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.server.dao.Cola" target="com.server.dao.ListaSimple"/>
+    <UseRelation source="com.server.dao.arbolAvl" target="com.server.dao.Flag" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="log" source="com.server.dao.ImplementacionDao" target="com.server.dao.LogFile" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ARBOLB" source="com.server.dao.ImplementacionDao" target="com.server.dao.B" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.server.dao.NodoSimple" target="com.server.dao.NodoSimple" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.server.modelo.Venta" target="com.server.Idao.AdminObject"/>
+    <UseRelation source="com.server.dao.ImplementacionDao" target="com.server.modelo.Producto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="raiz" source="com.server.dao.B" target="com.server.dao.Pagina" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.server.modelo.Venta" target="com.server.modelo.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.server.servicio.servicio" target="com.server.modelo.Producto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.server.dao.NodoAvl" target="com.server.dao.ListaSimple" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.server.modelo.Venta" target="com.server.dao.ListaSimple" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.server.dao.NodoAvl" target="com.server.dao.NodoAvl" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="izdo" source="com.server.dao.NodoAvl" target="com.server.dao.NodoAvl" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.server.dao.NodoAvl" target="com.server.dao.Cola" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.server.modelo.Venta" target="com.server.Idao.Comparador"/>
+    <UseRelation source="com.server.dao.Logical" target="com.server.dao.Pagina" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.server.dao.ImplementacionDao" target="com.server.modelo.Usuario" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="PRODUCTOS" source="com.server.dao.ImplementacionDao" target="com.server.dao.TablaHash" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.server.modelo.Usuario" target="com.server.Idao.AdminObject"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.server.modelo.Direccion" target="com.server.Idao.AdminObject"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.server.modelo.Producto" target="com.server.Idao.AdminObject"/>
+    <HasRelation name="ramas" source="com.server.dao.Pagina" target="com.server.dao.Pagina" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.server.dao.ListaSimple" target="com.server.dao.NodoSimple" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.server.dao.B" target="com.server.dao.Pagina" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.server.dao.ListaSimple" target="com.server.Idao.Comparador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.server.dao.B" target="com.server.dao.ListaSimple" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.server.dao.Pagina" target="com.server.dao.Pagina" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="nd" source="com.server.dao.Logical" target="com.server.dao.Pagina" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="detalle" source="com.server.modelo.Venta" target="com.server.modelo.Detalle" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ListaSimple&lt;Detalle&gt;"/>
+    <HasRelation name="dcho" source="com.server.dao.NodoAvl" target="com.server.dao.NodoAvl" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
